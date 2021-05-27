@@ -1,0 +1,115 @@
+Version: 3.3.3 (64133)
+Sha1: 68eba96de8051dcb12cf43b3a6955f1ee7156b4b
+Started on: 2021-05-26 14:57:57.466
+Resources: C:\Program Files\Docker\Docker\resources
+OS: Windows 10 Pro
+Edition: Professional
+Id: 2009
+Build: 19042
+BuildLabName: 19041.1.amd64fre.vb_release.191206-1406
+File: C:\Users\IT Manager\AppData\Local\Docker\log.txt
+CommandLine: "C:\Program Files\Docker\Docker\Docker Desktop.exe" 
+You can send feedback, including this log file, at https://github.com/docker/for-win/issues
+[14:57:57.622][GUI               ][Info   ] Starting...
+[14:57:57.794][LoggingMessageHandler][Info   ] [96b11dbf] <GoBackendClient start> GET http://localhost/ping
+[14:57:57.856][GoBackendClient   ][Warning] HttpOS Client: connection timed out.
+[14:57:58.059][AppMigrator       ][Info   ] Current version: 9. Latest version: 9
+[14:57:58.091][GoBackendProcess  ][Info   ] Starting C:\Program Files\Docker\Docker\resources\com.docker.backend.exe -addr unix:\\.\pipe\dockerBackendApiServer
+[14:57:58.106][GoBackendProcess  ][Info   ] Started
+[14:57:58.106][TrackingSettings  ][Info   ] Crash report and usage statistics are enabled
+[14:57:58.106][SegmentApi        ][Info   ] Usage statistic: Identify
+[14:57:58.122][SegmentApi        ][Info   ] Usage statistic: appLaunched
+[14:57:58.137][SegmentApi        ][Info   ] Usage statistic: heartbeat
+[14:57:58.153][GUI               ][Error  ] System.ArgumentException:
+Unable to create an instance of Docker.App: Unable to create an instance of Docker.ApiServices.Update.UpdateCheckTimer: Unable to create an instance of Docker.ApiServices.Update.Updater: Unable to create an instance of Docker.Notifications.BackgroundUpdateWatcher: Exception has been thrown by the target of an invocation.
+   at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 89
+   at Docker.Core.Di.Singletons.Get(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 51
+   at Docker.Core.Di.Singletons.Get[T]() in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 28
+   at Docker.Program.Run(IReadOnlyCollection`1 args) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Desktop\Program.cs:line 281
+
+  System.ArgumentException:
+  Unable to create an instance of Docker.ApiServices.Update.UpdateCheckTimer: Unable to create an instance of Docker.ApiServices.Update.Updater: Unable to create an instance of Docker.Notifications.BackgroundUpdateWatcher: Exception has been thrown by the target of an invocation.
+     at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 89
+     at Docker.Core.Di.Singletons.Get(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 51
+     at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+     at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+     at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+     at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 83
+  
+     System.ArgumentException:
+     Unable to create an instance of Docker.ApiServices.Update.Updater: Unable to create an instance of Docker.Notifications.BackgroundUpdateWatcher: Exception has been thrown by the target of an invocation.
+        at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 89
+        at Docker.Core.Di.Singletons.Get(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 51
+        at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+        at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+        at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+        at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 83
+     
+         System.ArgumentException:
+         Unable to create an instance of Docker.Notifications.BackgroundUpdateWatcher: Exception has been thrown by the target of an invocation.
+            at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 93
+            at Docker.Core.Di.Singletons.Get(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 51
+            at System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+            at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+            at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+            at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 83
+         
+              System.Reflection.TargetInvocationException:
+              Exception has been thrown by the target of an invocation.
+                 at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
+                 at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+                 at Docker.Core.Di.Singletons.NewInstance(Type type, Int32 depth) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Core\di\Singletons.cs:line 83
+              
+                    System.Runtime.InteropServices.COMException:
+                    Retrieving the COM class factory for component with CLSID {1ECCA34C-E88A-44E3-8D6A-8921BDE9E452} failed due to the following error: 80070422 The service cannot be started, either because it is disabled or because it has no enabled devices associated with it. (Exception from HRESULT: 0x80070422).
+                       at Docker.Notifications.BackgroundUpdateWatcher..ctor(ISystrayNotifications systray, IUpdateStateNotifier updateStateNotifier) in C:\workspaces\PR-15766\src\github.com\docker\pinata\win\src\Docker.Desktop\Notifications\BackgroundUpdateWatcher.cs:line 12
+                    
+[14:57:58.169][LoggingMessageHandler][Info   ] [5282a95b] <GoBackendClient start> GET http://localhost/ping
+[14:57:58.169][GUI               ][Info   ] Sending Bugsnag report 1114eb28-51ac-4db9-b194-ab31b67209ef...
+[14:57:58.249][GoBackendProcess  ][Info   ] msg="starting backend server"
+[14:57:58.249][GoBackendProcess  ][Info   ] msg="started port-forwarding control server on \\\\.\\pipe\\dockerVpnKitControl"
+[14:57:58.249][GoBackendProcess  ][Info   ] msg="listening on unix:\\\\.\\pipe\\dockerVpnkitData for data connection"
+[14:57:58.249][GoBackendProcess  ][Info   ] ⇨ http server started on \\.\pipe\dockerVpnKitControl
+[14:57:58.250][GoBackendProcess  ][Info   ] ⇨ http server started on \\.\pipe\docker_cli
+[14:57:58.250][GoBackendProcess  ][Info   ] msg="adding routes for /docker.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] msg="adding routes for /kube-images.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] msg="adding routes for /services.tar -> C:\\Program Files\\Docker\\Docker\\resources\\services.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] ⇨ http server started on \\.\pipe\dockerBackendApiServer
+[14:57:58.251][GoBackendProcess  ][Info   ] msg="adding routes for /docker.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] msg="adding routes for /kube-images.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] msg="adding routes for /services.tar -> C:\\Program Files\\Docker\\Docker\\resources\\services.tar"
+[14:57:58.251][GoBackendProcess  ][Info   ] ⇨ http server started on \\.\pipe\dockerBackendApiServerForGuest
+[14:57:58.315][GUI               ][Info   ] Bugsnag report 1114eb28-51ac-4db9-b194-ab31b67209ef sent
+[14:57:58.315][SegmentApi        ][Info   ] Usage statistic: eventCrash
+[14:57:59.232][Diagnostics       ][Warning] Starting to gather diagnostics as User : 'C:\Program Files\Docker\Docker\resources\com.docker.diagnose.exe' gather.
+[14:57:59.423][GoBackendProcess  ][Info   ] msg="external: GET /diagnostics/goroutines 200 \"Go-http-client/1.1\" \"\""
+[14:57:59.426][GoBackendProcess  ][Info   ] msg="external: GET /events 200 \"DockerDesktopGo\" \"\""
+[14:57:59.427][GoBackendProcess  ][Info   ] GET failed with Get "http://unix/forwards/list": open \\.\pipe\dockerWsl2BootstrapExposePorts: The system cannot find the file specified.
+[14:57:59.427][GoBackendProcess  ][Info   ] msg="external: GET /forwards/list 200 \"Go-http-client/1.1\" \"\""
+[14:57:59.440][GoBackendProcess  ][Info   ] msg="external: GET /ping 200 \"DockerDesktopGo\" \"\""
+[14:58:00.281][GoBackendProcess  ][Info   ] msg="external: GET /ping 200 \"DockerDesktopCSharp\" \"\""
+[14:58:00.307][LoggingMessageHandler][Info   ] [5282a95b] <GoBackendClient end> GET http://localhost/ping -> 200 OK (took 2141ms)
+[14:58:00.325][GoBackendClient   ][Info   ] backend API ready
+[14:58:08.358][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 10.1151552s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:58:18.456][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 20.2131584s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:58:28.526][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 30.2830434s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:58:38.595][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 40.3507235s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:58:48.663][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 50.4194409s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:58:58.753][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m0.5095875s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:08.811][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m10.5674102s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:18.932][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m20.6889509s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:29.026][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m30.7831461s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:39.148][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m40.9043081s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:49.244][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 1m51.0008106s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[14:59:59.337][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m1.0937143s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:09.434][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m11.1906482s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:19.490][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m21.2430523s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:29.581][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m31.3376822s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:39.650][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m41.4064005s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:49.762][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 2m51.5187146s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:00:59.844][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 3m1.6009535s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:01:09.929][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 3m11.686105s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:01:20.010][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 3m21.7668555s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:01:30.104][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 3m31.8603265s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:01:40.192][GoBackendProcess  ][Info   ] msg="still waiting for GUI settings after 3m41.9486498s. Last error was Get \"http://unix/settings\": open \\\\.\\pipe\\dockerWebApiServer: The system cannot find the file specified."
+[15:01:48.148][ErrorReportWindow ][Info   ] Open logs
